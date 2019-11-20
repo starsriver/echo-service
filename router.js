@@ -8,6 +8,7 @@ router.post('/echo',async (ctx, next) => {
         content: `echo: ${body.content}`,
         date: Date.now()
     });
+    console.log(ctx.request.url)
     ctx.status = 200;
     await next();
 });
